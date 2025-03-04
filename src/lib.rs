@@ -7,7 +7,7 @@ mod face;
 
 use alloc::{boxed::Box, collections::btree_set::BTreeSet, vec::Vec};
 pub use face::*;
-pub const CS: usize = 62;
+pub const CS: usize = 32;
 const CS_2: usize = CS * CS;
 pub const CS_P: usize = CS + 2;
 pub const CS_P2: usize = CS_P * CS_P;
@@ -256,6 +256,7 @@ mod tests {
     const MASK6: u64 = 0b111_111;
 
     #[derive(Debug)]
+    #[allow(unused)]
     struct Quad {
         x: u64,
         y: u64,
